@@ -127,6 +127,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\MenuExtensions .cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -134,11 +135,46 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="App_Readme\Responsive.txt" />
+    <Content Include="App_Readme\View.txt" />
     <Content Include="Content\base.css" />
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font\Latin-Modern\demo.html" />
+    <Content Include="Content\font\Latin-Modern\GUST e-foundry License.txt" />
+    <Content Include="Content\font\Latin-Modern\lmmono10-italic-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmono10-regular-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonocaps10-oblique-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonocaps10-regular-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonolt10-bold-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonolt10-boldoblique-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonolt10-oblique-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonolt10-regular-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonoltcond10-oblique-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonoltcond10-regular-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonoprop10-oblique-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonoprop10-regular-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonoproplt10-bold-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonoproplt10-boldoblique-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonoproplt10-oblique-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonoproplt10-regular-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\lmmonoslant10-regular-webfont.svg" />
+    <Content Include="Content\font\Latin-Modern\stylesheet.css" />
+    <Content Include="Content\font\TeX-Gyre-Cursor\demo.html" />
+    <Content Include="Content\font\TeX-Gyre-Cursor\GUST e-foundry License.txt" />
+    <Content Include="Content\font\TeX-Gyre-Cursor\stylesheet.css" />
+    <Content Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-bold-webfont.svg" />
+    <Content Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-bolditalic-webfont.svg" />
+    <Content Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-italic-webfont.svg" />
+    <Content Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-regular-webfont.svg" />
+    <Content Include="Content\font\Verily-Serif\Bitstream Vera License.txt" />
+    <Content Include="Content\font\Verily-Serif\demo.html" />
+    <Content Include="Content\font\Verily-Serif\stylesheet.css" />
+    <Content Include="Content\font\Verily-Serif\VerilySerifMono-webfont.svg" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\black.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\images\masonry\Agra-1.jpg" />
@@ -159,8 +195,16 @@
     <Content Include="Content\images\masonry\Agra-7.jpg" />
     <Content Include="Content\images\masonry\Agra-8.jpg" />
     <Content Include="Content\images\masonry\Agra-9.jpg" />
+    <Content Include="Content\images\masonry\Jaipur-1.JPG" />
+    <Content Include="Content\images\masonry\Jaipur-2.JPG" />
+    <Content Include="Content\images\masonry\Jaipur-3.JPG" />
+    <Content Include="Content\images\masonry\Jaipur-4.JPG" />
+    <Content Include="Content\images\masonry\Jaipur-5.JPG" />
+    <Content Include="Content\images\masonry\Jaipur-6.JPG" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\base.js" />
+    <Content Include="Scripts\bootstrap-carousel.js" />
+    <Content Include="Scripts\bootstrap-transition.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.8.1-vsdoc.js" />
@@ -170,6 +214,7 @@
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\lazy-bootstrap-carousel.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -181,7 +226,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Helpers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +236,75 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\font\Latin-Modern\lmmono10-italic-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmono10-italic-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmono10-italic-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmono10-regular-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmono10-regular-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmono10-regular-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonocaps10-oblique-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonocaps10-oblique-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonocaps10-oblique-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonocaps10-regular-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonocaps10-regular-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonocaps10-regular-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonolt10-bold-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonolt10-bold-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonolt10-bold-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonolt10-boldoblique-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonolt10-boldoblique-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonolt10-boldoblique-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonolt10-oblique-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonolt10-oblique-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonolt10-oblique-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonolt10-regular-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonolt10-regular-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonolt10-regular-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonoltcond10-oblique-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonoltcond10-oblique-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonoltcond10-oblique-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonoltcond10-regular-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonoltcond10-regular-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonoltcond10-regular-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonoprop10-oblique-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonoprop10-oblique-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonoprop10-oblique-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonoprop10-regular-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonoprop10-regular-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonoprop10-regular-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonoproplt10-bold-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonoproplt10-bold-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonoproplt10-bold-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonoproplt10-boldoblique-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonoproplt10-boldoblique-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonoproplt10-boldoblique-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonoproplt10-oblique-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonoproplt10-oblique-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonoproplt10-oblique-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonoproplt10-regular-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonoproplt10-regular-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonoproplt10-regular-webfont.woff" />
+    <None Include="Content\font\Latin-Modern\lmmonoslant10-regular-webfont.eot" />
+    <None Include="Content\font\Latin-Modern\lmmonoslant10-regular-webfont.ttf" />
+    <None Include="Content\font\Latin-Modern\lmmonoslant10-regular-webfont.woff" />
+    <None Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-bold-webfont.eot" />
+    <None Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-bold-webfont.ttf" />
+    <None Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-bold-webfont.woff" />
+    <None Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-bolditalic-webfont.eot" />
+    <None Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-bolditalic-webfont.ttf" />
+    <None Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-bolditalic-webfont.woff" />
+    <None Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-italic-webfont.eot" />
+    <None Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-italic-webfont.ttf" />
+    <None Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-italic-webfont.woff" />
+    <None Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-regular-webfont.eot" />
+    <None Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-regular-webfont.ttf" />
+    <None Include="Content\font\TeX-Gyre-Cursor\texgyrecursor-regular-webfont.woff" />
+    <None Include="Content\font\Verily-Serif\VerilySerifMono-webfont.eot" />
+    <None Include="Content\font\Verily-Serif\VerilySerifMono-webfont.ttf" />
+    <None Include="Content\font\Verily-Serif\VerilySerifMono-webfont.woff" />
+    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

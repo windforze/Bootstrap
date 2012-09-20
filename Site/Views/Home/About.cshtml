@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/_BootstrapLayout.cshtml";
+}
+
+<h2>About</h2>
+<div class="container">
+      <div class="row">
+        <div class="span10 offset1">
+            <h2>An example of lazy carousel with twitter bootstrap</h2>
+            <p>I created this page to show you hox to create a lazy carousel with twitter bootstrap.</p>
+            <div id="main-carousel" class="carousel slide">
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img alt="Jaipur" src="~/Content/images/masonry/Jaipur-1.JPG" />
+                        <div class="carousel-caption">
+                            <h4>Jaipur picture 01</h4>
+                            <p>An image from my recent travel in India.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="Jaipur" src="~/Content/images/masonry/Jaipur-2.JPG" />
+                        <div class="carousel-caption">
+                            <h4>Jaipur picture 02</h4>
+                            <p>An image from my recent travel in India.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="Jaipur" src="~/Content/images/masonry/Jaipur-3.JPG" />
+                        <div class="carousel-caption">
+                            <h4>Jaipur picture 03</h4>
+                            <p>An image from my recent travel in India.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image loading -->
+                <div class="loading hide"><img src="~/Content/images/black.png"/></div>
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#main-carousel" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#main-carousel" data-slide="next">&rsaquo;</a>
+            </div>
+        </div>
+      </div>
+    </div> <!-- /container -->

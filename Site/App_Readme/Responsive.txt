@@ -1,0 +1,2 @@
+﻿http://blog.cloudfour.com/css-media-query-for-mobile-is-fools-gold/
+http://2012.dconstruct.org/conference/lukas/

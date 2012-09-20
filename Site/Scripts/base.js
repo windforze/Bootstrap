@@ -1,44 +1,35 @@
 /**
- * Base js functions
- */
+* Base js functions
+*/
 
-$(document).ready(function(){
-    //Init jQuery Masonry layout
-    init_masonry();
+$(document).ready(function () {
+    var $container = $('.container');
 
-    //Select menu init
-    $("#collapsed-navbar ."+$('body').attr('class')).attr('selected', 'selected');
-
-    //Select menu onchange
-    $("#collapsed-navbar").change(function () {
-        window.location = $(this).val();
-    });
-});
-
-
-function init_masonry(){
-    var $container = $('#content');
-
-    var gutter = 12;
-    var minWidth = 150;
-    $container.imagesLoaded( function(){
+    var gutter = 30;
+    var min_width = 300;
+    $container.imagesLoaded(function () {
         $container.masonry({
-            itemSelector : '.box',
+            itemSelector: '.box',
             gutterWidth: gutter,
             isAnimated: true,
-              columnWidth: function( containerWidth ) {
-                var numOfBoxes = (containerWidth/minWidth | 0);
+            columnWidth: function (containerWidth) {
+                var box_width = (((containerWidth - 2 * gutter) / 3) | 0);
 
-                var boxWidth = (((containerWidth - (numOfBoxes-1)*gutter)/numOfBoxes) | 0) ;
-
-                if (containerWidth < minWidth) {
-                    boxWidth = containerWidth;
+                if (box_width < min_width) {
+                    box_width = (((containerWidth - gutter) / 2) | 0);
                 }
 
-                $('.box').width(boxWidth);
+                if (box_width < min_width) {
+                    box_width = containerWidth;
+                }
 
-                return boxWidth;
-              }
+                $('.box').width(box_width);
+
+                return box_width;
+            }
         });
     });
-}
+
+    //$('.carousel').carousel({ interval: false });
+    
+});
