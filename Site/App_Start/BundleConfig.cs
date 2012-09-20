@@ -14,11 +14,19 @@ namespace Site.App_Start {
             
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap")
-                        .Include("~/Scripts/bootstrap.js"));
+                        .Include("~/Scripts/bootstrap.min.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/masonry")
+                        .Include("~/Scripts/jquery.masonry.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/bootstrap/css")
-                        .Include("~/Content/bootstrap.css")
-                        .Include("~/Content/bootstrap-responsive.css"));
+                        .Include("~/Content/bootstrap.min.css"));
+
+            bundles.Add(new StyleBundle("~/Content/bootstrap.min/css")
+                        .Include("~/Content/bootstrap-responsive.min.css"));
+
+            bundles.Add(new StyleBundle("~/Content/base/css")
+                        .Include("~/Content/base.css"));
 
             BundleTable.EnableOptimizations = true;
         }
